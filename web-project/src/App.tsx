@@ -10,17 +10,17 @@ import ResourcesPage from './pages/resources';
 import TeamPage from './pages/team';
 import ContactPage from './pages/contact';
 import ArticlePage from './pages/resources/article';
+import ChatbotWidget from './components/chatbot/ChatbotWidget';
 
 export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      {/* Floating chat — outside layout so it stays on top on every route */}
+      <ChatbotWidget />
       <div className="flex flex-col min-h-screen bg-white">
-        {/* Navbar and RouteRow rendered globally at the top */}
         <Navbar />
         <RouteRow />
-        
-        {/* Main page content area that stretches to fill empty space */}
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Homepage />} />
@@ -32,8 +32,6 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
-        
-        {/* Footer rendered globally at the bottom */}
         <Footer />
       </div>
     </Router>
