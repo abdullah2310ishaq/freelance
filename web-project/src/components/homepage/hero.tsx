@@ -1,5 +1,6 @@
 import { ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import heroHome from '../../assets/homepage/herohome.png';
 import redCorner from '../../assets/homepage/redcorner.png';
 import blurredCorner from '../../assets/homepage/blurred.png';
 
@@ -7,7 +8,7 @@ const Hero = () => {
     return (
         <section
             className="relative w-full min-h-[500px] sm:min-h-[550px] lg:h-[580px] bg-cover bg-center overflow-hidden flex items-center"
-            style={{ backgroundImage: "url('/src/assets/homepage/herohome.png')" }}
+            style={{ backgroundImage: `url(${heroHome})` }}
         >
             {/* Background Overlay: Taaki desktop par right side image depth acchi aaye aur mobile par text readable rahe */}
             <div className="absolute inset-0 bg-black/50 lg:bg-transparent z-0" />
