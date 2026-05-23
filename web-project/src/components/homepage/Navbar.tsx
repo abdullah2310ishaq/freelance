@@ -1,5 +1,6 @@
 
 import { MapPin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import navbarLogo from '../../assets/homepage/navbar_logo.png';
 import leafLogo from '../../assets/homepage/leaf.svg';
 
@@ -63,9 +64,9 @@ const Navbar = () => {
 
                     {/* RIGHT SIDE: Contact Us Button */}
                     <div className="flex items-center justify-center lg:justify-end">
-                        <button className="bg-[#fab802] hover:bg-[#e0a400] text-black font-semibold px-8 py-2.5 rounded-full shadow-sm transition-all text-sm sm:text-base">
+                        <Link to="/contact" className="bg-[#fab802] hover:bg-[#e0a400] text-black font-semibold px-8 py-2.5 rounded-full shadow-sm transition-all text-sm sm:text-base text-center inline-block">
                             Contact Us
-                        </button>
+                        </Link>
                     </div>
 
                 </div>

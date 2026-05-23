@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 // Dropdown arrow aur Mobile Menu icons ke liye
 import { ChevronDown, Menu, X } from 'lucide-react';
 
@@ -7,12 +8,12 @@ const RouteRow = () => {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
 
     const navLinks = [
-        { name: 'HOME', href: '#' },
-        { name: 'ABOUT US', href: '#' },
-        { name: 'SERVICES', href: '#', hasDropdown: true },
-        { name: 'RESOURCES', href: '#' },
-        { name: 'TEAM', href: '#' },
-        { name: 'CONTACT US', href: '#' },
+        { name: 'HOME', href: '/' },
+        { name: 'ABOUT US', href: '/about' },
+        { name: 'SERVICES', href: '/services', hasDropdown: true },
+        { name: 'RESOURCES', href: '/resources' },
+        { name: 'TEAM', href: '/team' },
+        { name: 'CONTACT US', href: '/contact' },
     ];
 
     // Aapki exact typography specs ka reuseable string variable
@@ -53,9 +54,9 @@ const RouteRow = () => {
                                         {/* Simple Dropdown Menu */}
                                         {isServicesOpen && (
                                             <div className="absolute top-full left-0 w-48 bg-white text-gray-800 shadow-xl rounded-b-md border border-gray-100 py-2 animate-fadeIn z-50 normal-case tracking-normal">
-                                                <a href="#" className="block px-4 py-2 text-xs font-semibold hover:bg-gray-100 transition-colors">Corporate Tax</a>
-                                                <a href="#" className="block px-4 py-2 text-xs font-semibold hover:bg-gray-100 transition-colors">Personal Tax</a>
-                                                <a href="#" className="block px-4 py-2 text-xs font-semibold hover:bg-gray-100 transition-colors">Bookkeeping</a>
+                                                <Link to="/services" className="block px-4 py-2 text-xs font-semibold hover:bg-gray-100 transition-colors">Corporate Tax</Link>
+                                                <Link to="/services" className="block px-4 py-2 text-xs font-semibold hover:bg-gray-100 transition-colors">Personal Tax</Link>
+                                                <Link to="/services" className="block px-4 py-2 text-xs font-semibold hover:bg-gray-100 transition-colors">Bookkeeping</Link>
                                             </div>
                                         )}
                                     </div>
@@ -63,13 +64,13 @@ const RouteRow = () => {
                             }
 
                             return (
-                                <a
+                                <Link
                                     key={link.name}
-                                    href={link.href}
+                                    to={link.href}
                                     className={`hover:text-gray-300 transition-colors py-3 ${typographyClass}`}
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             );
                         })}
                     </div>
@@ -93,20 +94,20 @@ const RouteRow = () => {
                                     </button>
                                     {isServicesOpen && (
                                         <div className="pl-4 mt-2 space-y-2 border-l border-gray-500 text-gray-300 normal-case tracking-normal text-xs">
-                                            <a href="#" className="block py-1">Corporate Tax</a>
-                                            <a href="#" className="block py-1">Personal Tax</a>
-                                            <a href="#" className="block py-1">Bookkeeping</a>
+                                            <Link to="/services" className="block py-1" onClick={() => setIsMobileMenuOpen(false)}>Corporate Tax</Link>
+                                            <Link to="/services" className="block py-1" onClick={() => setIsMobileMenuOpen(false)}>Personal Tax</Link>
+                                            <Link to="/services" className="block py-1" onClick={() => setIsMobileMenuOpen(false)}>Bookkeeping</Link>
                                         </div>
                                     )}
                                 </div>
                             ) : (
-                                <a
-                                    href={link.href}
+                                <Link
+                                    to={link.href}
                                     className={`block py-1.5 ${typographyClass}`}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             )}
                         </div>
                     ))}

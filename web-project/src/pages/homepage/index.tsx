@@ -1,5 +1,3 @@
-import Navbar from "../../components/homepage/Navbar";
-import RouteRow from "../../components/homepage/routerow";
 import Hero from "../../components/homepage/hero";
 import HeroNextRow from "../../components/homepage/heronextrow";
 import AboutUsHome from "../../components/homepage/about_home";
@@ -10,12 +8,9 @@ import ClientQueries from "../../components/homepage/client_queuries";
 import ResourcesInsight from "../../components/homepage/resourcesinsight";
 import ExpertAccountingSupport from "../../components/homepage/expertaccountingsupport";
 
-
 export default function Homepage() {
     return (
         <div>
-            <Navbar />
-            <RouteRow />
             <Hero />
             <HeroNextRow />
             <AboutUsHome />
@@ -26,7 +21,6 @@ export default function Homepage() {
             <ClientQueries />
             <ResourcesInsight />
             <ExpertAccountingSupport />
-
         </div>
     )
 }
