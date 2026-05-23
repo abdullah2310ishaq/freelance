@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Trophy } from 'lucide-react';
 import aboutPhoto from '../../assets/homepage/about_photo.png';
 import homeAboutLogo from '../../assets/homepage/home_about.png';

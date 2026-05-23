@@ -60,12 +60,12 @@ const ClientTrust: React.FC = () => {
     ];
 
     return (
-        <section
-            className="relative w-full py-16 lg:py-24 bg-cover bg-center select-none"
-            style={{ backgroundImage: `url(${mapImg})` }}
-        >
-            {/* Background Map Tint/Overlay (Taaki image halki dikhe aur text transparently prominent ho) */}
-            <div className="absolute inset-0 bg-[#f8fafc]/93 pointer-events-none -z-10" />
+        <section className="relative w-full py-16 lg:py-24 select-none bg-[#F5F5F5]">
+            {/* Background Map Image with subtle Opacity */}
+            <div 
+                className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none -z-10"
+                style={{ backgroundImage: `url(${mapImg})` }}
+            />
 
             <div className="max-w-[92rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 

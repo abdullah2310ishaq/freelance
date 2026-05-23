@@ -1,4 +1,3 @@
-import React from 'react';
 import cpaSvg from '../../assets/homepage/cpasvg.svg';
 import registeredSvg from '../../assets/homepage/registeredsvg.svg';
 import accurateSvg from '../../assets/homepage/accurate.svg';
