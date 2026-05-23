@@ -3,7 +3,7 @@ import ResourceHeroImg from '../../assets/resources/resourceshero.jpg';
 
 export const TeamHero: React.FC = () => {
     return (
-        <section className="relative w-full h-[60vh] min-h-[400px] max-h-[600px] flex items-center justify-center overflow-hidden bg-slate-900">
+        <section className="relative w-full h-[40vh] min-h-[300px] md:h-[60vh] md:min-h-[400px] max-h-[600px] flex items-center justify-center overflow-hidden bg-slate-900">
             {/* Background Image */}
             <img
                 src={ResourceHeroImg}
