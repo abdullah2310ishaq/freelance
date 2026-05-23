@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import zaneSorellImg from '../../assets/resources/zanesorell.jpg';
 import mayaMathyImg from '../../assets/resources/mayamathy.jpg';
@@ -56,9 +57,9 @@ export const BoardOfDirectors: React.FC = () => {
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1F3864] leading-tight">
                             Board Of Directors
                         </h2>
-                        <button className="bg-[#f0b400] hover:bg-[#d9a200] text-[#1F3864] font-bold text-sm px-6 py-3 rounded-full transition-colors shadow-sm active:scale-98">
+                        <Link to="/contact" className="bg-[#f0b400] hover:bg-[#d9a200] text-[#1F3864] font-bold text-sm px-6 py-3 rounded-full transition-colors shadow-sm active:scale-98 text-center inline-block">
                             Get Started
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Right Block */}

@@ -28,7 +28,7 @@ export const ServiceAnalytic: React.FC = () => {
     ];
 
     return (
-        <section className="w-full bg-[#1F3864] py-16 md:py-24 px-6 md:px-12 lg:px-24 text-white">
+        <section className="w-full bg-[#1F3864] py-12 md:py-24 px-6 md:px-12 lg:px-24 text-white">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
                 {/* Left Column: Context, Paragraph & Checkmarks */}
@@ -68,7 +68,7 @@ export const ServiceAnalytic: React.FC = () => {
                     {stats.map((stat) => (
                         <div
                             key={stat.id}
-                            className="bg-white/[0.04] border border-white/[0.08] backdrop-blur-sm rounded-[1.5rem] p-6 md:p-8 flex flex-col items-center justify-center text-center gap-1 min-h-[140px] md:min-h-[160px] shadow-sm hover:bg-white/[0.06] transition-colors"
+                            className="bg-white/[0.04] border border-white/[0.08] backdrop-blur-sm rounded-[1.5rem] p-4 md:p-8 flex flex-col items-center justify-center text-center gap-1 min-h-[140px] md:min-h-[160px] shadow-sm hover:bg-white/[0.06] transition-colors"
                         >
                             <span className="text-3xl md:text-4xl font-sans font-bold tracking-tight text-white">
                                 {stat.value}

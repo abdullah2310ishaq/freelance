@@ -14,14 +14,14 @@ const Navbar = () => {
 
                     {/* LEFT SIDE: Big Logo with perfect spacing */}
                     <div className="flex items-center justify-start">
-                        <div className="flex items-center">
+                        <Link to="/" className="flex items-center">
                             {/* h-24+ se logo mazeed bada aur clear dikhega */}
                             <img
                                 src={navbarLogo}
                                 alt="Analytic Alliance Logo"
                                 className="h-10 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
                             />
-                        </div>
+                        </Link>
                     </div>
 
                     {/* MIDDLE SIDE: Vertical Stack (Top: Address/Phone, Bottom: Serving Badge) */}

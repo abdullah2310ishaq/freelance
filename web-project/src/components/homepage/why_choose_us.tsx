@@ -36,7 +36,7 @@ const WhyChooseUs: React.FC = () => {
     ];
 
     return (
-        <section className="w-full bg-[#F5F5F5] py-16 lg:py-20 select-none" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+        <section className="w-full bg-[#F5F5F5] py-12 lg:py-20 select-none" style={{ fontFamily: "'Open Sans', sans-serif" }}>
             <div className="max-w-none w-full pl-6 pr-4 sm:pl-12 sm:pr-6 lg:pl-36 lg:pr-6 mx-auto">
 
                 {/* Main Flex layout: pushes left and right columns to opposite corners */}

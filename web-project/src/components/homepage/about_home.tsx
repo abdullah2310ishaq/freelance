@@ -1,10 +1,11 @@
 import { ArrowRight, Trophy } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import aboutPhoto from '../../assets/homepage/about_photo.png';
 import homeAboutLogo from '../../assets/homepage/home_about.png';
 
 const AboutUsHome = () => {
     return (
-        <section className="w-full bg-white py-16 lg:py-24 overflow-hidden">
+        <section className="w-full bg-white py-12 lg:py-24 overflow-hidden">
             <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Main Grid: Mobile par vertical single column, desktop (lg) par 2 columns */}
@@ -22,7 +23,7 @@ const AboutUsHome = () => {
                             />
 
                             {/* Floating Badge (Bottom Right Corner Overlap) */}
-                            <div className="absolute -bottom-6 -right-2 sm:right-4 bg-white rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.12)] p-4 flex items-center space-x-4 border border-gray-50 max-w-[240px] animate-bounce-slow">
+                            <div className="absolute -bottom-6 right-2 sm:-right-2 bg-white rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.12)] p-4 flex items-center space-x-4 border border-gray-50 max-w-[200px] sm:max-w-[240px] animate-bounce-slow">
                                 {/* Red Rounded Icon Container */}
                                 <div className="bg-[#c90a14] p-3 rounded-2xl text-white flex-shrink-0">
                                     <Trophy className="h-6 w-6" />
@@ -62,13 +63,13 @@ const AboutUsHome = () => {
 
                         {/* Red Link CTA with Arrow */}
                         <div className="mt-6 mb-8">
-                            <a
-                                href="#"
+                            <Link
+                                to="/about"
                                 className="inline-flex items-center space-x-2 text-[#c90a14] hover:text-[#a00810] font-bold text-sm sm:text-[15px] transition-colors group"
                             >
                                 <span>Learn More About Us</span>
                                 <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Bottom Brand Logo Container */}

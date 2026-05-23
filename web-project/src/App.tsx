@@ -8,6 +8,7 @@ import ServicesPage from './pages/services';
 import ResourcesPage from './pages/resources';
 import TeamPage from './pages/team';
 import ContactPage from './pages/contact';
+import ArticlePage from './pages/resources/article';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/resources" element={<ResourcesPage />} />
+            <Route path="/resources/article/:id" element={<ArticlePage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>

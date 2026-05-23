@@ -33,16 +33,13 @@ const HeroNextRow = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Responsive Grid Setup: Mobile par 1, Tablet par 2, aur Desktop par 4 columns */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-y-6 sm:gap-y-8 lg:gap-y-0">
+                <div className="grid grid-cols-2 lg:grid-cols-4 items-center justify-center gap-y-6 lg:gap-y-0 gap-x-4">
 
                     {features.map((item, index) => (
                         <div
                             key={item.id}
                             className={`flex flex-col items-center justify-center text-center px-4 w-full
-                /* Desktop Vertical Divider Layout Using Your Specific Color #E2E8F0 */
-                ${index !== features.length - 1 ? 'lg:border-r lg:border-[#E2E8F0]' : ''}
-                /* Tablet View Cross Divider Setup */
-                ${index % 2 === 0 ? 'sm:border-r sm:border-b-0' : ''}
+                ${index % 2 === 0 ? 'border-r border-[#E2E8F0]' : (index !== features.length - 1 ? 'lg:border-r lg:border-[#E2E8F0]' : '')}
               `}
                         >
                             {/* SVG Asset Container */}

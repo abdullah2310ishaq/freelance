@@ -1,4 +1,5 @@
 import { ShieldCheck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import redCorner from '../../assets/homepage/redcorner.png';
 import blurredCorner from '../../assets/homepage/blurred.png';
 
@@ -9,10 +10,10 @@ const Hero = () => {
             style={{ backgroundImage: "url('/src/assets/homepage/herohome.png')" }}
         >
             {/* Background Overlay: Taaki desktop par right side image depth acchi aaye aur mobile par text readable rahe */}
-            <div className="absolute inset-0 bg-black/20 lg:bg-transparent z-0" />
+            <div className="absolute inset-0 bg-black/50 lg:bg-transparent z-0" />
 
             {/* BLURRED BACKGROUND UNDERLAY (sligh  tly wider so edges show) */}
-            <div className="absolute inset-y-0 left-0 w-full lg:w-[47.5%] z-10 pointer-events-none">
+            <div className="hidden lg:block absolute inset-y-0 left-0 lg:w-[47.5%] z-10 pointer-events-none">
                 <img
                     src={blurredCorner}
                     alt="Blurred Underlay"
@@ -24,18 +25,16 @@ const Hero = () => {
         Isme custom drop-shadow lagayi hai taaki exact image ke cutout edge ke sath 
         wo brown/dark shade automatically generate ho jaye.
       */}
-            <div className="absolute inset-y-0 left-0 w-full lg:w-[45%] z-10 pointer-events-none drop-shadow-[15px_0_30px_rgba(40,10,10,0.6)]">
+            <div className="hidden lg:block absolute inset-y-0 left-0 lg:w-[45%] z-10 pointer-events-none drop-shadow-[15px_0_30px_rgba(40,10,10,0.6)]">
                 <img
                     src={redCorner}
                     alt="Red Angle Banner"
                     className="w-full h-full object-cover object-left md:object-fill"
                 />
-                {/* Mobile & Tablet view cover: Jab image responsive transform ho toh background solid red rahe */}
-                <div className="absolute inset-0 bg-[#c90a14] -z-10 lg:hidden" />
             </div>
 
             {/* CONTENT LAYER */}
-            <div className="relative max-w-[92rem] mx-auto px-2 sm:px-4 lg:px-4 w-full z-20 pt-12 pb-16 lg:py-0">
+            <div className="relative max-w-[92rem] mx-auto px-6 md:px-12 lg:px-4 w-full z-20 pt-12 pb-16 lg:py-0">
                 <div className="max-w-xl lg:max-w-xl text-white">
 
                     {/* Badge: Registered in Alberta */}
@@ -60,14 +59,14 @@ const Hero = () => {
                     {/* Action Call to Buttons */}
                     <div className="flex flex-wrap gap-3 items-center">
                         {/* Primary Yellow Button */}
-                        <button className="bg-[#fab802] hover:bg-[#e0a400] text-black font-bold px-6 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all text-xs sm:text-sm active:scale-95 pointer-events-auto">
+                        <Link to="/contact" className="bg-[#fab802] hover:bg-[#e0a400] text-black font-bold px-6 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all text-xs sm:text-sm active:scale-95 pointer-events-auto text-center inline-block">
                             Contact Us Today
-                        </button>
+                        </Link>
 
                         {/* Secondary Transparent Red Button */}
-                        <button className="border-2 border-white hover:bg-white/10 text-white font-semibold px-6 py-2.5 rounded-full transition-all text-xs sm:text-sm active:scale-95 pointer-events-auto">
+                        <Link to="/services" className="border-2 border-white hover:bg-white/10 text-white font-semibold px-6 py-2.5 rounded-full transition-all text-xs sm:text-sm active:scale-95 pointer-events-auto text-center inline-block">
                             View Services
-                        </button>
+                        </Link>
                     </div>
 
                 </div>

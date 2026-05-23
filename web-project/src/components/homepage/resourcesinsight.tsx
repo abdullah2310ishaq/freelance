@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import yearEndTaxImg from '../../assets/homepage/year_end_tax.png';
 import understandingNoticeImg from '../../assets/homepage/understanding_notice.png';
@@ -37,7 +38,7 @@ const ResourcesInsight: React.FC = () => {
     ];
 
     return (
-        <section className="w-full bg-[#f8fafc] py-16 lg:py-24 select-none">
+        <section className="w-full bg-[#f8fafc] py-12 lg:py-24 select-none">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* HEADER BLOCK: Split into Left Text and Right Action Link */}
@@ -56,13 +57,13 @@ const ResourcesInsight: React.FC = () => {
 
                     {/* Right Sided Link Wrapper */}
                     <div className="flex-shrink-0">
-                        <a
-                            href="#"
+                        <Link
+                            to="/resources"
                             className="inline-flex items-center space-x-1 text-[#c90a14] hover:text-[#a00810] text-[13px] sm:text-sm font-bold tracking-wide group transition-colors"
                         >
                             <span>View All Resources</span>
                             <ChevronRight className="h-4 w-4 transform group-hover:translate-x-0.5 transition-transform" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -93,7 +94,7 @@ const ResourcesInsight: React.FC = () => {
                                 </div>
 
                                 {/* Content Block */}
-                                <div className="p-6 sm:p-8 flex flex-col">
+                                <div className="p-5 sm:p-8 flex flex-col">
                                     {/* Main Title Heading */}
                                     <h3 className="text-[17px] sm:text-lg font-bold text-[#1F3864] font-serif leading-snug tracking-wide mb-3.5 line-clamp-2 group-hover:text-[#c90a14] transition-colors">
                                         {item.title}
@@ -107,13 +108,13 @@ const ResourcesInsight: React.FC = () => {
                             </div>
 
                             {/* Bottom "Read Article" action (Card container layout ensures alignment) */}
-                            <div className="px-6 pb-6 sm:px-8 sm:pb-8 pt-0">
-                                <a
-                                    href="#"
+                            <div className="px-5 pb-5 sm:px-8 sm:pb-8 pt-0">
+                                <Link
+                                    to={`/resources/article/${item.id}`}
                                     className="inline-block text-[#fab802] hover:text-[#e0a400] text-xs sm:text-sm font-bold tracking-wide hover:underline transition-colors"
                                 >
                                     Read Article
-                                </a>
+                                </Link>
                             </div>
 
                         </div>

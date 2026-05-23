@@ -70,7 +70,7 @@ const ServiceElevate: React.FC = () => {
     ];
 
     return (
-        <section className="w-full bg-[#fcfcfc] py-16 lg:py-24 select-none">
+        <section className="w-full bg-[#fcfcfc] py-12 lg:py-24 select-none">
             <div className="max-w-7xl mx-auto px-6 sm:px-8">
 
                 {/* SECTION HEADER */}
@@ -103,7 +103,7 @@ const ServiceElevate: React.FC = () => {
                             </div>
 
                             {/* Card Content Base */}
-                            <div className="p-8 flex-1 flex flex-col">
+                            <div className="p-6 md:p-8 flex-1 flex flex-col">
                                 {/* Red Outline Icon */}
                                 <div className="mb-4 flex justify-start">
                                     <div className="border border-neutral-200 bg-white p-2.5 rounded-xl shadow-sm">

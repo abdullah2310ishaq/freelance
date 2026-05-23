@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, FileText, Link2, ClipboardList } from 'lucide-react';
 
 interface FAQItem {
@@ -130,9 +131,9 @@ const ClientQueries: React.FC = () => {
 
                             {/* CTA Action Yellow Button */}
                             <div className="w-full">
-                                <button className="w-full sm:w-auto bg-[#fab802] hover:bg-[#e0a400] text-black font-bold px-8 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all text-sm sm:text-base active:scale-[0.98]">
+                                <Link to="/resources" className="w-full sm:w-auto bg-[#fab802] hover:bg-[#e0a400] text-black font-bold px-8 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all text-sm sm:text-base active:scale-[0.98] text-center inline-block">
                                     Access Client Resources
-                                </button>
+                                </Link>
                             </div>
 
                         </div>

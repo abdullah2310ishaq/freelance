@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import taxServiceImg from '../../assets/homepage/taxservice.png';
 import corporateImg from '../../assets/homepage/corporate.png';
 import advisoryImg from '../../assets/homepage/advisory.png';
@@ -71,7 +72,7 @@ const CoreCompetencies: React.FC = () => {
     ];
 
     return (
-        <section className="w-full bg-white py-16 lg:py-24 select-none">
+        <section className="w-full bg-white py-12 lg:py-24 select-none">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* SECTION HEADER */}
@@ -104,7 +105,7 @@ const CoreCompetencies: React.FC = () => {
                             </div>
 
                             {/* Card Content Base */}
-                            <div className="p-6 sm:p-8 flex-1 flex flex-col">
+                            <div className="p-5 sm:p-8 flex-1 flex flex-col">
                                 {/* Red Outline Icon */}
                                 <div className="mb-4 flex justify-start">
                                     <div className="border border-gray-200 bg-white p-2.5 rounded-xl shadow-sm">
@@ -137,9 +138,9 @@ const CoreCompetencies: React.FC = () => {
 
                 {/* BOTTOM ACTION BUTTON */}
                 <div className="flex justify-center">
-                    <button className="bg-[#fab802] hover:bg-[#e0a400] text-black font-bold px-10 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all text-sm sm:text-base active:scale-95">
+                    <Link to="/services" className="bg-[#fab802] hover:bg-[#e0a400] text-black font-bold px-10 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all text-sm sm:text-base active:scale-95 text-center inline-block">
                         View Full Services
-                    </button>
+                    </Link>
                 </div>
 
             </div>

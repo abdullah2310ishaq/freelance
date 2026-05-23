@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, MapPin, Link2 } from 'lucide-react';
 import footerLogo from '../../assets/homepage/footerlogo.png';
 
@@ -6,7 +7,7 @@ const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="w-full bg-[#1F3864] text-white pt-10 pb-6 md:pt-16 md:pb-8 border-t border-white/10 select-none">
+        <footer className="w-full bg-[#1F3864] text-white pt-10 pb-[calc(1.5rem+env(safe-area-inset-bottom))] md:pt-16 md:pb-8 border-t border-white/10 select-none">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* MAIN FOOTER GRID LAYOUT */}
@@ -14,13 +15,13 @@ const Footer: React.FC = () => {
 
                     {/* COLUMN 1: BRAND LOGO AREA (Occupies 4 Columns on large screens) */}
                     <div className="col-span-2 lg:col-span-4 flex flex-col space-y-4">
-                        <div className="flex items-center justify-start bg-white rounded p-1 max-w-[180px]">
+                        <Link to="/" className="flex items-center justify-start bg-white rounded p-1 max-w-[180px]">
                             <img
                                 src={footerLogo}
                                 alt="Analytic Alliance Footer Logo"
                                 className="h-14 w-auto object-contain object-left"
                             />
-                        </div>
+                        </Link>
                         <p className="text-white/85 text-xs sm:text-[13.5px] leading-relaxed max-w-xs font-normal antialiased">
                             Chartered Professional Accountant Corporation.Providing premium accounting and tax services across Alberta.
                         </p>
@@ -32,10 +33,10 @@ const Footer: React.FC = () => {
                             Services
                         </h4>
                         <ul className="space-y-3 text-xs sm:text-[13.5px] font-normal text-white/80">
-                            <li><a href="#" className="hover:text-white transition-colors block">Corporate Tax</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors block">Personal Tax</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors block">Bookkeeping</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors block">Advisory</a></li>
+                            <li><Link to="/services" className="hover:text-white transition-colors block">Corporate Tax</Link></li>
+                            <li><Link to="/services" className="hover:text-white transition-colors block">Personal Tax</Link></li>
+                            <li><Link to="/services" className="hover:text-white transition-colors block">Bookkeeping</Link></li>
+                            <li><Link to="/services" className="hover:text-white transition-colors block">Advisory</Link></li>
                         </ul>
                     </div>
 
@@ -45,10 +46,10 @@ const Footer: React.FC = () => {
                             Company
                         </h4>
                         <ul className="space-y-3 text-xs sm:text-[13.5px] font-normal text-white/80">
-                            <li><a href="#" className="hover:text-white transition-colors block">About Us</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors block">Our Approach</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors block">Careers</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors block">Privacy Policy</a></li>
+                            <li><Link to="/about" className="hover:text-white transition-colors block">About Us</Link></li>
+                            <li><Link to="/about" className="hover:text-white transition-colors block">Our Approach</Link></li>
+                            <li><Link to="/team" className="hover:text-white transition-colors block">Careers</Link></li>
+                            <li><Link to="/about" className="hover:text-white transition-colors block">Privacy Policy</Link></li>
                         </ul>
                     </div>
 
