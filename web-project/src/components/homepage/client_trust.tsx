@@ -112,8 +112,15 @@ const ClientTrust: React.FC = () => {
                                 </div>
 
                                 {/* Main Review Text */}
-                                <p className={`text-xs sm:text-[13.5px] leading-relaxed antialiased font-medium mb-6
-                  ${item.isFeatured ? 'text-white/95' : 'text-gray-600'}`}
+                                <p 
+                                    className={`antialiased mb-6 ${item.isFeatured ? 'text-white/95' : 'text-gray-600'}`}
+                                    style={{
+                                        fontFamily: 'Arial, sans-serif',
+                                        fontWeight: 400,
+                                        fontSize: '14px',
+                                        lineHeight: '26px',
+                                        letterSpacing: '0%'
+                                    }}
                                 >
                                     {item.text}
                                 </p>
