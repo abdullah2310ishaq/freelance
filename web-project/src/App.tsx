@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/homepage/Navbar';
 import RouteRow from './components/homepage/routerow';
 import Footer from './components/homepage/footer';
@@ -13,6 +14,7 @@ import ArticlePage from './pages/resources/article';
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-white">
         {/* Navbar and RouteRow rendered globally at the top */}
         <Navbar />
