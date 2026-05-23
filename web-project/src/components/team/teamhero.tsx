@@ -1,14 +1,14 @@
 import React from 'react';
-import ResourceHeroImg from '../../assets/resources/client.jpg';
+import ResourceHeroImg from '../../assets/resources/resourceshero.jpg';
 
-export const ResourceHero: React.FC = () => {
+export const TeamHero: React.FC = () => {
     return (
         <section className="relative w-full h-[60vh] min-h-[400px] max-h-[600px] flex items-center justify-center overflow-hidden bg-slate-900">
             {/* Background Image */}
             <img
                 src={ResourceHeroImg}
                 alt="Analytic Alliance Team Members Banner"
-                className="absolute inset-0 w-full h-full object-cover object-[center_80%]"
+                className="absolute inset-0 w-full h-full object-cover object-center"
             />
 
             {/* Lighter Overlay for Text Contrast */}
@@ -18,15 +18,16 @@ export const ResourceHero: React.FC = () => {
             <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center text-white flex flex-col items-center gap-4">
                 {/* Main Heading */}
                 <h1 className="text-3xl md:text-5xl font-serif font-bold tracking-tight leading-tight max-w-3xl drop-shadow-md text-white">
-                    Client Resources
+                    Meet Our Team Members
                 </h1>
 
                 {/* Subtitle / Description */}
                 <p className="text-sm md:text-base font-normal tracking-wide leading-relaxed max-w-2xl text-white drop-shadow-sm">
-                    Access practical guides, checklists, templates, and worksheets designed to help you manage your finances, stay compliant, and make informed business decisions with confidence. </p>
+                    Meet the experienced professionals dedicated to delivering trusted accounting, tax, and advisory services with personalized support.
+                </p>
             </div>
         </section>
     );
 };
 
-export default ResourceHero;
+export default TeamHero;
