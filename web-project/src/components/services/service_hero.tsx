@@ -11,8 +11,8 @@ export const ServiceHero: React.FC = () => {
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
 
-      {/* Dark Overlay for Text Contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/65 backdrop-blur-[0.5px]" />
+      {/* Lighter Overlay for Text Contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/40 backdrop-blur-[0.5px]" />
 
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center text-white flex flex-col items-center gap-4">

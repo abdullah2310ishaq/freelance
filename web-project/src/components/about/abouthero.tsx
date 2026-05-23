@@ -11,8 +11,8 @@ export const AboutHero: React.FC = () => {
                 className="absolute inset-0 w-full h-full object-cover object-center"
             />
 
-            {/* Dark Overlay for Text Contrast */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60 backdrop-blur-[1px]" />
+            {/* Lighter Overlay for Text Contrast */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/40 backdrop-blur-[1px]" />
 
             {/* Content Container */}
             <div className="relative z-10 w-full max-w-4xl mx-auto px-6 text-center text-white flex flex-col items-center gap-4">
