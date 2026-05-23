@@ -8,7 +8,7 @@ export const ContactHero: React.FC = () => {
             <img
                 src={ContactHeroImg}
                 alt="Analytic Alliance Team Members Banner"
-                className="absolute inset-0 w-full h-full object-cover object-[center_60%]"
+                className="absolute inset-0 w-full h-full object-cover object-[center_50%]"
             />
 
             {/* Lighter Overlay for Text Contrast */}
