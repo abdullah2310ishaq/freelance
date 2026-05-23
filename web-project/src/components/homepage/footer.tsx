@@ -6,14 +6,14 @@ const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="w-full bg-[#1F3864] text-white pt-16 pb-8 border-t border-white/10 select-none">
+        <footer className="w-full bg-[#1F3864] text-white pt-10 pb-6 md:pt-16 md:pb-8 border-t border-white/10 select-none">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* MAIN FOOTER GRID LAYOUT */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-gray-500/30">
+                <div className="grid grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-12 pb-12 border-b border-gray-500/30">
 
                     {/* COLUMN 1: BRAND LOGO AREA (Occupies 4 Columns on large screens) */}
-                    <div className="lg:col-span-4 flex flex-col space-y-4">
+                    <div className="col-span-2 lg:col-span-4 flex flex-col space-y-4">
                         <div className="flex items-center justify-start bg-white rounded p-1 max-w-[180px]">
                             <img
                                 src={footerLogo}
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                     </div>
 
                     {/* COLUMN 2: SERVICES LINKS (Occupies 3 Columns) */}
-                    <div className="lg:col-span-3 flex flex-col space-y-4 lg:pl-6">
+                    <div className="col-span-1 lg:col-span-3 flex flex-col space-y-4 lg:pl-6">
                         <h4 className="text-sm font-bold tracking-wide text-white">
                             Services
                         </h4>
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                     </div>
 
                     {/* COLUMN 3: COMPANY NAVIGATION LINKS (Occupies 2 Columns) */}
-                    <div className="lg:col-span-2 flex flex-col space-y-4">
+                    <div className="col-span-1 lg:col-span-2 flex flex-col space-y-4">
                         <h4 className="text-sm font-bold tracking-wide text-white">
                             Company
                         </h4>
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
                     </div>
 
                     {/* COLUMN 4: DIRECT CONTACT INFO (Occupies 3 Columns) */}
-                    <div className="lg:col-span-3 flex flex-col space-y-4">
+                    <div className="col-span-2 lg:col-span-3 flex flex-col space-y-4">
                         <h4 className="text-sm font-bold tracking-wide text-white">
                             Contact
                         </h4>

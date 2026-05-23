@@ -9,8 +9,8 @@ const Navbar = () => {
         <header className="w-full bg-white shadow-sm border-b border-gray-100">
             {/* max-w-7xl aur px screens par automatic left-right space generate karega 
         jaise photo mein logo se pehle gap hai.*/}
-            <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-3 pb-2 lg:py-1">
-                <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-4">
+            <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-2 md:py-3 lg:py-1">
+                <div className="flex flex-row items-center justify-between lg:gap-4">
 
                     {/* LEFT SIDE: Big Logo with perfect spacing */}
                     <div className="flex items-center justify-start">
@@ -19,13 +19,13 @@ const Navbar = () => {
                             <img
                                 src={navbarLogo}
                                 alt="Analytic Alliance Logo"
-                                className="h-18 sm:h-22 lg:h-24 w-auto object-contain"
+                                className="h-10 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
                             />
                         </div>
                     </div>
 
                     {/* MIDDLE SIDE: Vertical Stack (Top: Address/Phone, Bottom: Serving Badge) */}
-                    <div className="flex flex-col items-center justify-center gap-3 lg:flex-1 lg:pt-2">
+                    <div className="hidden lg:flex flex-col items-center justify-center gap-3 lg:flex-1 lg:pt-2">
 
                         {/* TOP LINE: Address | Phone */}
                         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs sm:text-sm font-semibold text-[#2d3748]">
@@ -63,8 +63,8 @@ const Navbar = () => {
                     </div>
 
                     {/* RIGHT SIDE: Contact Us Button */}
-                    <div className="flex items-center justify-center lg:justify-end">
-                        <Link to="/contact" className="bg-[#fab802] hover:bg-[#e0a400] text-black font-semibold px-8 py-2.5 rounded-full shadow-sm transition-all text-sm sm:text-base text-center inline-block">
+                    <div className="flex items-center justify-end">
+                        <Link to="/contact" className="bg-[#fab802] hover:bg-[#e0a400] text-black font-semibold px-4 py-1.5 sm:px-8 sm:py-2.5 rounded-full shadow-sm transition-all text-xs sm:text-sm md:text-base text-center inline-block">
                             Contact Us
                         </Link>
                     </div>

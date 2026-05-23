@@ -34,7 +34,7 @@ export const ContactSection: React.FC = () => {
                     </div>
 
                     {/* Info Details Grid */}
-                    <div className="grid grid-cols-2 gap-x-32 gap-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-32 gap-y-8">
                         {/* Email Contact */}
                         <div className="flex flex-col gap-3">
                             <img
@@ -68,7 +68,7 @@ export const ContactSection: React.FC = () => {
                         </div>
 
                         {/* Office Contact */}
-                        <div className="flex flex-col gap-3 col-span-2">
+                        <div className="flex flex-col gap-3 col-span-1 md:col-span-2">
                             <img
                                 src={officeIcon}
                                 alt="Office Icon"
@@ -111,7 +111,7 @@ export const ContactSection: React.FC = () => {
                                     placeholder="First name"
                                     value={formData.firstName}
                                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                                    className="w-full px-3.5 py-2.5 border border-neutral-200 rounded-lg text-sm text-gray-900 placeholder-neutral-300 focus:outline-none focus:border-neutral-400 font-serif"
+                                    className="w-full px-3.5 py-2.5 border border-neutral-200 rounded-lg text-base md:text-sm text-gray-900 placeholder-neutral-300 focus:outline-none focus:border-neutral-400 font-serif"
                                 />
                             </div>
                             <div className="flex flex-col gap-1.5">
@@ -121,7 +121,7 @@ export const ContactSection: React.FC = () => {
                                     placeholder="Last name"
                                     value={formData.lastName}
                                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                                    className="w-full px-3.5 py-2.5 border border-neutral-200 rounded-lg text-sm text-gray-900 placeholder-neutral-300 focus:outline-none focus:border-neutral-400 font-serif"
+                                    className="w-full px-3.5 py-2.5 border border-neutral-200 rounded-lg text-base md:text-sm text-gray-900 placeholder-neutral-300 focus:outline-none focus:border-neutral-400 font-serif"
                                 />
                             </div>
                         </div>
@@ -134,7 +134,7 @@ export const ContactSection: React.FC = () => {
                                 placeholder="you@company.com"
                                 value={formData.email}
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                className="w-full px-3.5 py-2.5 border border-neutral-200 rounded-lg text-sm text-gray-900 placeholder-neutral-300 focus:outline-none focus:border-neutral-400 font-serif"
+                                className="w-full px-3.5 py-2.5 border border-neutral-200 rounded-lg text-base md:text-sm text-gray-900 placeholder-neutral-300 focus:outline-none focus:border-neutral-400 font-serif"
                             />
                         </div>
 
@@ -142,7 +142,7 @@ export const ContactSection: React.FC = () => {
                         <div className="flex flex-col gap-1.5">
                             <label className="text-xs font-semibold text-gray-700">Phone number</label>
                             <div className="flex border border-neutral-200 rounded-lg overflow-hidden focus-within:border-neutral-400">
-                                <div className="flex items-center gap-1.5 px-3 bg-transparent border-r border-neutral-200 text-sm text-gray-700 cursor-pointer select-none">
+                                <div className="flex items-center gap-1.5 px-3 bg-transparent border-r border-neutral-200 text-base md:text-sm text-gray-700 cursor-pointer select-none">
                                     <span>US</span>
                                     <svg className="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -153,7 +153,7 @@ export const ContactSection: React.FC = () => {
                                     placeholder="+1 (555) 000-0000"
                                     value={formData.phoneNumber}
                                     onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
-                                    className="w-full px-3.5 py-2.5 text-sm text-gray-900 placeholder-neutral-300 focus:outline-none font-serif"
+                                    className="w-full px-3.5 py-2.5 text-base md:text-sm text-gray-900 placeholder-neutral-300 focus:outline-none font-serif"
                                 />
                             </div>
                         </div>
@@ -166,12 +166,12 @@ export const ContactSection: React.FC = () => {
                                 placeholder="Leave us a message..."
                                 value={formData.message}
                                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                className="w-full px-3.5 py-2.5 border border-neutral-200 rounded-lg text-sm text-gray-900 placeholder-neutral-300 focus:outline-none focus:border-neutral-400 font-serif resize-none"
+                                className="w-full px-3.5 py-2.5 border border-neutral-200 rounded-lg text-base md:text-sm text-gray-900 placeholder-neutral-300 focus:outline-none focus:border-neutral-400 font-serif resize-none"
                             />
                         </div>
 
                         {/* Privacy Policy Checkbox */}
-                        <div className="flex items-center gap-3 mt-1">
+                        <div className="flex items-start md:items-center gap-3 mt-1 pt-0.5 md:pt-0">
                             <input
                                 type="checkbox"
                                 id="privacy-policy"
