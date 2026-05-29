@@ -111,18 +111,22 @@ code,
   animation: chatbot-pulse-ring 2.2s ease-out infinite;
 }
 
-/* Global floating chat — always above page chrome */
+/* Global floating chat — no full-screen overlay; only FAB + panel capture clicks */
 .chatbot-root {
   position: fixed;
-  inset: 0;
   z-index: 9999;
   pointer-events: none;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  overflow: visible;
 }
 
 .chatbot-fab {
   pointer-events: auto;
   bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
-  right: max(1.25rem, env(safe-area-inset-right, 0px));
+  right: max(1rem, env(safe-area-inset-right, 0px));
 }
 
 @media (min-width: 640px) {
@@ -133,12 +137,19 @@ code,
 }
 
 .chatbot-panel {
-  bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
-  right: max(1rem, env(safe-area-inset-right, 0px));
+  pointer-events: auto;
+  bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+  left: max(0.75rem, env(safe-area-inset-left, 0px));
+  right: max(0.75rem, env(safe-area-inset-right, 0px));
+  width: auto;
+  height: min(85vh, 720px);
+  max-height: min(85vh, 720px);
 }
 
 @media (min-width: 640px) {
   .chatbot-panel {
+    left: auto;
     right: max(1.5rem, env(safe-area-inset-right, 0px));
+    width: min(480px, calc(100vw - 2rem));
   }
 }

@@ -23,7 +23,7 @@ const ExpertAccountingSupport: React.FC = () => {
         {
             id: 2,
             title: "Email Us",
-            value: "info@analyticalliance.ca",
+            value: "info@allianceaccountingcpa.ca",
             subtext: "We aim to reply within 24 hrs",
             icon: <Mail className="h-5 w-5 text-white" />
         },

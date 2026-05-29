@@ -71,8 +71,8 @@ const Footer: React.FC = () => {
                             {/* Email item */}
                             <div className="flex items-center space-x-2.5">
                                 <Mail className="h-4 w-4 text-white/70 flex-shrink-0" />
-                                <a href="mailto:info@analyticalliance.ca" className="hover:text-white transition-colors break-all">
-                                    info@analyticalliance.ca
+                                <a href="mailto:info@allianceaccountingcpa.ca" className="hover:text-white transition-colors break-all">
+                                    info@allianceaccountingcpa.ca
                                 </a>
                             </div>
 
