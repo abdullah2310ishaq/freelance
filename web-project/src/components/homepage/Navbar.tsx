@@ -3,6 +3,7 @@ import { MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import navbarLogo from '../../assets/homepage/navbar_logo.png';
 import leafLogo from '../../assets/homepage/leaf.svg';
+import { companyPhone } from '../../config/companyContact';
 
 const Navbar = () => {
     return (
@@ -41,8 +42,8 @@ const Navbar = () => {
                             {/* Phone */}
                             <div className="flex items-center space-x-1.5">
                                 <Phone className="h-4 w-4 text-[#0f2e59] fill-[#0f2e59] flex-shrink-0" />
-                                <a href="tel:306-515-1386" className="hover:underline">
-                                    306-515-1386
+                                <a href={`tel:${companyPhone.tel}`} className="hover:underline">
+                                    {companyPhone.display}
                                 </a>
                             </div>
                         </div>

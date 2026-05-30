@@ -1,4 +1,5 @@
 import type { ChatbotKnowledgeEntry } from './types';
+import { companyEmail, companyPhone } from '../../config/companyContact';
 
 /** Company facts — edit here to keep the assistant aligned with your site. */
 export const chatbotCompany = {
@@ -6,8 +7,8 @@ export const chatbotCompany = {
     legalName: 'Analytic Alliance Chartered Professional Accountant Corporation',
     tagline: 'Professional accounting, tax, and advisory services across Alberta.',
     address: '7618 10th Ave NW, Edmonton, AB T6K 2T6, Canada',
-    email: 'info@allianceaccountingcpa.ca',
-    phone: '306-515-1386',
+    email: companyEmail,
+    phone: companyPhone.display,
     hours: 'Monday–Friday, 9:00 AM – 5:00 PM MST',
     websitePaths: {
         home: '/',
@@ -42,7 +43,7 @@ export const chatbotKnowledgeBase: ChatbotKnowledgeEntry[] = [
     {
         question: 'How can I contact you?',
         answer:
-            'Call us at 306-515-1386, email info@allianceaccountingcpa.ca, or use the contact form on our Contact page. We typically reply to emails within 24 hours.',
+            `Call us at ${companyPhone.display}, email ${companyEmail}, or use the contact form on our Contact page. We typically reply to emails within 24 hours.`,
     },
     {
         question: 'What are your business hours?',
@@ -114,8 +115,8 @@ export const chatbotWelcomeMessage = `Hi! I'm the ${chatbotCompany.name} assista
 
 /** Business WhatsApp for chat summary handoff (wa.me — no API required). */
 export const chatbotWhatsApp = {
-    display: '+92 331 4616122',
-    waNumber: '923314616122',
+    display: companyPhone.display,
+    waNumber: companyPhone.waNumber,
 };
 
 export const chatbotModel = 'gemini-2.5-flash';

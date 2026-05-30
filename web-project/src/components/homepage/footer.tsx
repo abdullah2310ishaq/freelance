@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, Link2 } from 'lucide-react';
+import { Mail, MapPin, Link2, Phone } from 'lucide-react';
 import footerLogo from '../../assets/homepage/footerlogo.png';
+import { companyEmail, companyPhone } from '../../config/companyContact';
 
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
@@ -68,11 +69,19 @@ const Footer: React.FC = () => {
                                 </span>
                             </div>
 
+                            {/* Phone item */}
+                            <div className="flex items-center space-x-2.5">
+                                <Phone className="h-4 w-4 text-white/70 flex-shrink-0" />
+                                <a href={`tel:${companyPhone.tel}`} className="hover:text-white transition-colors">
+                                    {companyPhone.display}
+                                </a>
+                            </div>
+
                             {/* Email item */}
                             <div className="flex items-center space-x-2.5">
                                 <Mail className="h-4 w-4 text-white/70 flex-shrink-0" />
-                                <a href="mailto:info@allianceaccountingcpa.ca" className="hover:text-white transition-colors break-all">
-                                    info@allianceaccountingcpa.ca
+                                <a href={`mailto:${companyEmail}`} className="hover:text-white transition-colors break-all">
+                                    {companyEmail}
                                 </a>
                             </div>
 

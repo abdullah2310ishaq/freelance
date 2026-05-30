@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import peopleImg from '../../assets/homepage/people.jpg';
+import { companyEmail, companyPhone } from '../../config/companyContact';
 
 interface ContactCard {
     id: number;
@@ -16,14 +17,14 @@ const ExpertAccountingSupport: React.FC = () => {
         {
             id: 1,
             title: "Call Us",
-            value: "306-515-1386",
+            value: companyPhone.display,
             subtext: "Mon-Fri, 9am - 5pm MST",
             icon: <Phone className="h-5 w-5 text-white fill-white" />
         },
         {
             id: 2,
             title: "Email Us",
-            value: "info@allianceaccountingcpa.ca",
+            value: companyEmail,
             subtext: "We aim to reply within 24 hrs",
             icon: <Mail className="h-5 w-5 text-white" />
         },

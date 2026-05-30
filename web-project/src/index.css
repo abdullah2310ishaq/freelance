@@ -142,8 +142,8 @@ code,
   left: max(0.75rem, env(safe-area-inset-left, 0px));
   right: max(0.75rem, env(safe-area-inset-right, 0px));
   width: auto;
-  height: min(85vh, 720px);
-  max-height: min(85vh, 720px);
+  height: min(72vh, 600px);
+  max-height: min(72vh, 600px);
 }
 
 @media (min-width: 640px) {

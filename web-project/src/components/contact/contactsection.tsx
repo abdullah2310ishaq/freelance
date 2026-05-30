@@ -3,6 +3,7 @@ import emailIcon from '../../assets/contact/email.svg';
 import phoneIcon from '../../assets/contact/phone.svg';
 import officeIcon from '../../assets/contact/office.svg';
 import { countries, defaultCountry, type Country } from './countries';
+import { companyEmail, companyPhone } from '../../config/companyContact';
 
 const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
@@ -149,8 +150,8 @@ export const ContactSection: React.FC = () => {
                             <div>
                                 <h3 className="text-gray-900 font-bold text-lg mb-1">Email</h3>
                                 <p className="text-neutral-400 text-sm mb-2">Our friendly team is here to help.</p>
-                                <a href="mailto:info@allianceaccountingcpa.ca" className="text-[#1F3864] font-bold text-sm hover:underline">
-                                    info@allianceaccountingcpa.ca
+                                <a href={`mailto:${companyEmail}`} className="text-[#1F3864] font-bold text-sm hover:underline">
+                                    {companyEmail}
                                 </a>
                             </div>
                         </div>
@@ -165,8 +166,8 @@ export const ContactSection: React.FC = () => {
                             <div>
                                 <h3 className="text-gray-900 font-bold text-lg mb-1">Phone</h3>
                                 <p className="text-neutral-400 text-sm mb-2">Mon-Fri from 8am to 5pm.</p>
-                                <a href="tel:306-515-1386" className="text-[#1F3864] font-bold text-sm hover:underline">
-                                    306-515-1386
+                                <a href={`tel:${companyPhone.tel}`} className="text-[#1F3864] font-bold text-sm hover:underline">
+                                    {companyPhone.display}
                                 </a>
                             </div>
                         </div>

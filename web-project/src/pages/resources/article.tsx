@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Phone, Mail, ArrowLeft, Calendar, User, BookOpen } from 'lucide-react';
 import resourceHeroImg from '../../assets/resources/resourceshero.jpg';
+import { companyEmail, companyPhone } from '../../config/companyContact';
 
 interface ArticleData {
     title: string;
@@ -180,13 +181,13 @@ export const ArticlePage: React.FC = () => {
                             
                             {/* Action contacts details */}
                             <div className="w-full space-y-4 mb-8 text-left text-xs sm:text-[13px] font-semibold text-white/90">
-                                <a href="tel:306-515-1386" className="flex items-center space-x-3 hover:text-[#fab802] transition-colors p-3 bg-white/[0.04] rounded-xl border border-white/5">
+                                <a href={`tel:${companyPhone.tel}`} className="flex items-center space-x-3 hover:text-[#fab802] transition-colors p-3 bg-white/[0.04] rounded-xl border border-white/5">
                                     <Phone className="h-4 w-4 text-[#fab802] flex-shrink-0" />
-                                    <span>Call: 306-515-1386</span>
+                                    <span>Call: {companyPhone.display}</span>
                                 </a>
-                                <a href="mailto:info@allianceaccountingcpa.ca" className="flex items-center space-x-3 hover:text-[#fab802] transition-colors p-3 bg-white/[0.04] rounded-xl border border-white/5">
+                                <a href={`mailto:${companyEmail}`} className="flex items-center space-x-3 hover:text-[#fab802] transition-colors p-3 bg-white/[0.04] rounded-xl border border-white/5">
                                     <Mail className="h-4 w-4 text-[#fab802] flex-shrink-0 break-all" />
-                                    <span className="break-all">Email: info@allianceaccountingcpa.ca</span>
+                                    <span className="break-all">Email: {companyEmail}</span>
                                 </a>
                             </div>
 
